@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1086146530453",
+    "firebase_url": "https://hackaton-travel.firebaseio.com",
+    "project_id": "hackaton-travel",
+    "storage_bucket": "hackaton-travel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086146530453:android:fe159c2782fc01c9da1f9c",
+        "android_client_info": {
+          "package_name": "com.hackathon.travel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086146530453-9767hinobaifc3ag3eggqg012rivkkgf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackathon.travel",
+            "certificate_hash": "a867b04e998796897ad6e46f7428749397ebf7dc"
+          }
+        },
+        {
+          "client_id": "1086146530453-o16gjmvadg2e9eaku6tjrf9gq3kjraoa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpo5PhMZUcuBbIqnkCBFW1Ez95wZbjXcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086146530453-o16gjmvadg2e9eaku6tjrf9gq3kjraoa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
