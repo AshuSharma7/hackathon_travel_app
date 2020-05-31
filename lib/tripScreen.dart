@@ -1,7 +1,10 @@
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:hackathon/destScreen.dart';
 import 'package:location/location.dart';
 
 class Trip extends StatefulWidget {
@@ -96,6 +99,7 @@ class _TripState extends State<Trip> {
 
     return Scaffold(
       body: Container(
+        color: Colors.white,
         padding: EdgeInsets.only(top: 50.0),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -137,7 +141,40 @@ class _TripState extends State<Trip> {
                   onMapCreated: _onMapCreated,
                   markers: _markers,
                   initialCameraPosition: initialCameraPosition),
-            )
+            ),
+            GestureDetector(
+              onTap: _markers.isEmpty
+                  ? () {
+                      Fluttertoast.showToast(
+                          msg:
+                              "Please Select Location on Map && Enter Address");
+                    }
+                  : () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => Destination()));
+                    },
+              child: AnimatedContainer(
+                duration: Duration(milliseconds: 500),
+                height: 50,
+                margin: EdgeInsets.all(20.0),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        width: 2.0,
+                        color:
+                            _markers.isNotEmpty ? Colors.white : Colors.black),
+                    color: _markers.isNotEmpty ? Colors.black : Colors.white,
+                    borderRadius: BorderRadius.circular(25.0)),
+                child: Text(
+                  "NEXT",
+                  style: TextStyle(
+                      color: _markers.isNotEmpty ? Colors.white : Colors.black,
+                      fontFamily: "Comfortaa"),
+                ),
+              ),
+            ),
           ],
         ),
       ),
